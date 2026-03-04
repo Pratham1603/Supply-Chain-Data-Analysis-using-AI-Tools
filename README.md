@@ -1,5 +1,5 @@
 <h1 align="center">End-to-End AI-Powered Supply Chain Analytics</h1>
-<h2 align="center">Atliq Mart Domain Analytics Dashboard</h2>
+<h2 align="center">Atliq Mart Domain Analysis</h2>
 
 ---
 
