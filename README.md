@@ -19,17 +19,12 @@ The entire workflow was implemented using an "AI-First" mindset, leveraging **n8
 
 ![System Architecture](Images/system_architecture.png)
 
-### Mail Fetching 
-
-![Mail Fetching](Images/mail_fetching.jpeg)
 
 ### Automation Workflow (n8n)
  
 ![n8n Workflow](Images/n8n_workflow.png)
 
 ### Database Schema (Supabase)
-
-![Supabase ER Diag](Images/supabase_er.png)
 
 ![Supabase Tables](Images/supabase_tables.png)
 
