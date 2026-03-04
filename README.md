@@ -1,11 +1,11 @@
 <h1 align="center">End-to-End AI-Powered Supply Chain Analytics</h1>
-<h2 align="center">Atliq Mart Domain Analysis</h2>
+<h2 align="center">Super Mart Domain Analysis</h2>
 
 ---
 
 ## 📌 Project Overview
 
-This project simulates an advanced Business Intelligence solution for **Atliq Mart**, an organic food manufacturer.
+This project simulates an advanced Business Intelligence solution for **Super Mart**, an organic food manufacturer.
 
 The objective was to solve critical supply chain reliability issues—such as inconsistent inventory and customer dissatisfaction—by automating the data pipeline from unstructured emails to a cloud database and building an AI-assisted analysis environment.
 
@@ -28,7 +28,7 @@ The entire workflow was implemented using an "AI-First" mindset, leveraging **n8
 
 ![Supabase Tables](Images/supabase_tables.png)
 
-### Qudractic (AI SpreadSheet)
+### Quadratic (AI Spreadsheet)
  
 ![Dashboard](Images/qudractic.png)
 
@@ -36,7 +36,7 @@ The entire workflow was implemented using an "AI-First" mindset, leveraging **n8
 
 ## 🎯 Business Problem
 
-Atliq Mart required clear visibility into their supply chain reliability due to:
+Super Mart required clear visibility into their supply chain reliability due to:
 
 - **Customer Dissatisfaction**: Significant issues in order management and delivery performance.
 - **Inventory Management**: Failure to maintain optimum inventory levels across regions.
@@ -49,7 +49,7 @@ Atliq Mart required clear visibility into their supply chain reliability due to:
 
 - **Format**: CSV (Extracted via Gmail automation from daily sales emails).
 - **Type**: Structured supply chain transactional and master data.
-- **Tables**: 
+- **Tables**:
   - `fact_orders_line`: Detailed order item data including agreed vs. actual delivery dates.
   - `fact_aggregate`: Consolidated order-level data.
   - `dim_customers` & `dim_products`: Master data for regional and product analysis.
@@ -71,7 +71,7 @@ Dataset available in the `/dataset` folder.
 
 ## 🧱 Workflow Architecture
 
-**Email Ingestion** → **n8n Automation** (Monitors Gmail, extracts CSVs, and standardizes ISO date formats)  
+**Email Ingestion** → **n8n Automation** (Monitors Gmail, extracts CSVs, and standardizes ISO date formats) 
 → **Supabase** (Stores data in a Relational Star Schema)  
 → **Quadratic AI** (Uses Python to merge tables and calculate supply chain KPIs)  
 → **Business Insights** (Root cause analysis and regional performance tracking).
@@ -108,13 +108,10 @@ Dataset available in the `/dataset` folder.
 
 ## 🔗 Important Links  
 
-- 📖 **Qudratic Spreadsheet Analysis link**  
-  [Click here to View](https://app.quadratichq.com/file/538c2c17-c43d-43a0-a117-a5afe307018e)
+- 📖 **Quadratic Spreadsheet Analysis link** [Click here to View](https://app.quadratichq.com/file/538c2c17-c43d-43a0-a117-a5afe307018e)
 
-- 📖 **Medium Blog (Detailed Project Explanation)**  
-  [Read the full case study here](https://medium.com/@prathamharer1603/)
+- 📖 **Medium Blog (Detailed Project Explanation)** [Read the full case study here](https://medium.com/@prathamharer1603/)
 
-- 🎥 **YouTube Walkthrough (Dashboard Demo & Explanation)**  
-  [Watch the full project demo](YOUR_YOUTUBE_LINK_HERE)
+- 🎥 **YouTube Walkthrough (Dashboard Demo & Explanation)** [Watch the full project demo](https://youtu.be/PglKAYgRCbAu32GaW)
 
 ---
