@@ -21,7 +21,7 @@ The entire workflow was implemented using an "AI-First" mindset, leveraging **n8
 
 ### Mail Fetching 
 
-![Mail Fetching](Images/mail_fetching.png)
+![Mail Fetching](Images/mail_fetching.jpeg)
 
 ### Automation Workflow (n8n)
  
