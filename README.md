@@ -110,7 +110,7 @@ Dataset available in the `/dataset` folder.
 
 - 📖 **Quadratic Spreadsheet Analysis link** [Click here to View](https://app.quadratichq.com/file/538c2c17-c43d-43a0-a117-a5afe307018e)
 
-- 📖 **Medium Blog (Detailed Project Explanation)** [Read the full case study here](https://medium.com/@prathamharer1603/)
+- 📖 **Medium Blog (Detailed Project Explanation)** [Read the full case study here]([https://medium.com/@prathamharer1603/](https://medium.com/@prathamharer1603/automating-supply-chain-data-analysis-using-ai-agents-quadratic-n8n-supabase-090eaa424b49))
 
 - 🎥 **YouTube Walkthrough (Dashboard Demo & Explanation)** [Watch the full project demo](https://youtu.be/PglKAYgRCbAu32GaW)
 
