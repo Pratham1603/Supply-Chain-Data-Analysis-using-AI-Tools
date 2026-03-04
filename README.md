@@ -1,70 +1,107 @@
-# 📦 Atliq Mart: AI-Powered Supply Chain Analytics 🚀
-
-### 📖 Project Overview
-Atliq Mart, an organic food manufacturer, faced significant customer dissatisfaction due to immature supply chain management and inconsistent inventory levels. This project replaces traditional manual reporting with an **AI-First automated pipeline** to monitor real-time reliability and fulfillment KPIs.
+<h1 align="center">End-to-End AI-Powered Supply Chain Analytics</h1>
+<h2 align="center">Atliq Mart Domain Analytics Dashboard</h2>
 
 ---
 
-### 🏗️ System Architecture
-The project utilizes an agentic workflow to move data from unstructured communication (Email) to a cloud data warehouse for AI-assisted analysis.
+## 📌 Project Overview
 
+This project simulates an advanced Business Intelligence solution for **Atliq Mart**, an organic food manufacturer.
 
+The objective was to solve critical supply chain reliability issues—such as inconsistent inventory and customer dissatisfaction—by automating the data pipeline from unstructured emails to a cloud database and building an AI-assisted analysis environment.
 
-**Data Flow:** `Email (CSV) ➔ n8n (Automation) ➔ Supabase (PostgreSQL) ➔ Quadratic (AI Spreadsheet)`
-
----
-
-### 💻 Tech Stack
-* **n8n**: Agentic workflow automation to monitor Gmail, extract CSV attachments, and ingest data.
-* **Supabase (PostgreSQL)**: Cloud-hosted relational database utilizing a Star Schema for data warehousing.
-* **Quadratic**: An AI-powered spreadsheet used to perform Python-based data cleaning and KPI generation.
-* **Python (Pandas)**: Used within Quadratic for advanced data merging and transformation.
+The entire workflow was implemented using an "AI-First" mindset, leveraging **n8n** for agentic automation, **Supabase** for data warehousing, and **Quadratic** for AI-driven insights.
 
 ---
 
-### ⚙️ Data Pipeline & Workflows
+## 📈 Dashboard Preview
 
-#### 📧 1. Automated Ingestion (n8n & Gmail)
-The n8n workflow monitors a specific Gmail label (`daily sales`). When an email arrives, the agent:
-* Extracts the CSV attachment.
-* Converts data to JSON format.
-* Standardizes date formats (ISO) for database compatibility.
-* Inserts records into the corresponding Supabase Fact tables.
+### System Architecture
 
+![System Architecture](images/system_architecture.png)
 
+### Automation Workflow (n8n)
 
-#### 🗄️ 2. Data Modeling (Supabase)
-The database follows a **Star Schema** to optimize analytical queries:
-* **Fact Tables**: `fact_orders_line`, `fact_aggregate`.
-* **Dimension Tables**: `dim_customers`, `dim_products`, `dim_targets_orders`.
+![n8n Workflow](images/n8n_workflow.png)
 
+### Database Schema (Supabase)
 
-
-#### 📊 3. AI-Assisted Analysis (Quadratic)
-Using Quadratic’s AI agent, we generated Python scripts to:
-* Create a dynamic `dim_date` table.
-* Fetch real-time exchange rates (USD/INR) via API.
-* Generate a merged `fact_summary` for high-level reporting.
+![Supabase Tables](images/supabase_tables.png)
 
 ---
 
-### 📈 Key Supply Chain Metrics
-This project tracks essential KPIs to measure delivery reliability:
+## 🎯 Business Problem
 
-| Metric | Level | Description |
-| :--- | :--- | :--- |
-| **LFR (Line Fill Rate)** | Line | % of individual items shipped in full vs. ordered. |
-| **VFR (Volume Fill Rate)** | Volume | Total quantity shipped vs. total quantity ordered. |
-| **On Time %** | Order | % of orders where 100% of lines arrived by the agreed date. |
-| **In Full %** | Order | % of orders where 100% of lines were delivered in requested quantity. |
-| **OTIF %** | Order | The "Perfect Order" metric—both On Time and In Full. |
+Atliq Mart required clear visibility into their supply chain reliability due to:
+
+- **Customer Dissatisfaction**: Significant issues in order management and delivery performance.
+- **Inventory Management**: Failure to maintain optimum inventory levels across regions.
+- **Technical Gap**: Lack of automated tracking for "harsh" reliability metrics like OTIF (On-Time In-Full).
+- **Manual Overhead**: Inefficient processes for handling data from multiple cities (India & USA).
 
 ---
 
-### 🚀 How to Run
-1. **Database**: Execute the SQL scripts in `/sql/schema.sql` within your Supabase SQL editor.
-2. **Automation**: Import the `n8n_workflow.json` into your n8n instance and connect your Gmail/Supabase credentials.
-3. **Analysis**: Open the Quadratic file and run the Python cells to refresh the analytical summary.
+## 📊 Dataset
+
+- **Format**: CSV (Extracted via Gmail automation from daily sales emails).
+- **Type**: Structured supply chain transactional and master data.
+- **Tables**: 
+  - `fact_orders_line`: Detailed order item data including agreed vs. actual delivery dates.
+  - `fact_aggregate`: Consolidated order-level data.
+  - `dim_customers` & `dim_products`: Master data for regional and product analysis.
+  - `dim_targets_orders`: Performance targets for fulfillment metrics.
+
+Dataset available in the `/dataset` folder.
 
 ---
-*Project inspired by Codebasics AI Data Analysis series.*
+
+## ⚙️ Tools & Technologies Used
+
+- **n8n**: Agentic workflow automation used to monitor Gmail and ingest data into the cloud.
+- **Supabase (PostgreSQL)**: Cloud-hosted relational database used for data modeling and storage.
+- **Quadratic**: AI-powered spreadsheet interface for Python-based analysis and visualization.
+- **Python (Pandas)**: Applied within Quadratic for data cleaning, currency conversion, and KPI generation.
+- **OpenExchange API**: Integration used to fetch real-time USD/INR exchange rates.
+
+---
+
+## 🧱 Workflow Architecture
+
+**Email Ingestion** → **n8n Automation** (Monitors Gmail, extracts CSVs, and standardizes ISO date formats)  
+→ **Supabase** (Stores data in a Relational Star Schema)  
+→ **Quadratic AI** (Uses Python to merge tables and calculate supply chain KPIs)  
+→ **Business Insights** (Root cause analysis and regional performance tracking).
+
+---
+
+## 📂 Project Structure
+
+- **Dataset** → `/dataset` (Raw CSV files used for ingestion)
+- **Database Schema** → `/sql` (PostgreSQL `CREATE` scripts for all tables)
+- **Workflows** → `/n8n` (JSON export of the agentic pipeline)
+- **Screenshots** → `/images` (System architecture and dashboard views)
+- **Analysis Logic** → `/scripts` (Python prompts and snippets used for data transformation)
+
+---
+
+## ▶ How to Replicate the Project
+
+1. **Database**: Run the SQL scripts in the `/sql` folder on your **Supabase** SQL editor to build the Star Schema.
+2. **Automation**: Import the `.json` file from `/n8n` into your **n8n** instance and configure your Gmail and Supabase credentials.
+3. **Analysis**: Open **Quadratic**, connect your database, and execute the Python cells provided in the `/scripts` folder to generate the `fact_summary`.
+
+---
+
+## 💡 Key Outcomes
+
+- **Automated Pipeline**: Implemented a hands-free data flow from inbox to database.
+- **Reliability Metrics**: Successfully calculated OTIF (On-Time In-Full), Line Fill Rate, and Volume Fill Rate.
+- **AI Integration**: Leveraged AI agents to automate complex data cleaning and Python coding.
+- **Actionable Insights**: Identified performance gaps between Indian and US markets to support C-suite decision-making.
+
+---
+
+## 🔗 Important Links  
+
+- 🎥 **YouTube Walkthrough (Project Demo & Explanation)** [Watch the full project walkthrough by Codebasics](https://youtu.be/PglKAYgRCbAu32GaW)
+
+---
