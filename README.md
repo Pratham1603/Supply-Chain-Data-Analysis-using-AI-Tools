@@ -28,7 +28,7 @@ The entire workflow was implemented using an "AI-First" mindset, leveraging **n8
 
 ![Supabase Tables](Images/supabase_tables.png)
 
-### Qudractic AI SpreadSheet
+### Qudractic (AI SpreadSheet)
  
 ![Dashboard](Images/qudractic.png)
 
@@ -80,19 +80,20 @@ Dataset available in the `/dataset` folder.
 
 ## 📂 Project Structure
 
-- **Dataset** → `/dataset` (Raw CSV files used for ingestion)
-- **Database Schema** → `/sql` (PostgreSQL `CREATE` scripts for all tables)
-- **Workflows** → `/n8n` (JSON export of the agentic pipeline)
-- **Screenshots** → `/images` (System architecture and dashboard views)
-- **Analysis Logic** → `/scripts` (Python prompts and snippets used for data transformation)
+- **Dataset** → `Dataset.zip` (Raw CSV files)
+- **Workflows** → `N8N.json` (Agentic pipeline export)
+- **Spreadsheet Analysis** → `Qudratic(Supply Chain).grid` (Quadratic file)
+- **Documentation** → `Business Knowledge basic concept.pdf` & `Required-Prompts_&_Business-Insights.pdf`
+- **Screenshots** → `/Images` (Architecture and dashboard views)
 
 ---
 
 ## ▶ How to Replicate the Project
 
-1. **Database**: Run the SQL scripts in the `/sql` folder on your **Supabase** SQL editor to build the Star Schema.
-2. **Automation**: Import the `.json` file from `/n8n` into your **n8n** instance and configure your Gmail and Supabase credentials.
-3. **Analysis**: Open **Quadratic**, connect your database, and execute the Python cells provided in the `/scripts` folder to generate the `fact_summary`.
+1. **Database**: Create your PostgreSQL tables in **Supabase** using the schema shown in the `Supabase Tables` preview.
+2. **Automation**: Import `N8N.json` into your **n8n** instance and configure your Gmail and Supabase credentials.
+3. **Analysis**: Open **Quadratic**, import `Qudratic(Supply Chain).grid`, and execute the Python cells to generate the `fact_summary`.
+4. **Knowledge Base**: Refer to `Required-Prompts_&_Business-Insights.pdf` for the specific AI prompts used for data transformation.
 
 ---
 
