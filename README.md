@@ -107,6 +107,13 @@ Dataset available in the `/dataset` folder.
 
 ## 🔗 Important Links  
 
-- 🎥 **YouTube Walkthrough (Project Demo & Explanation)** [Watch the full project walkthrough by Codebasics](https://youtu.be/PglKAYgRCbAu32GaW)
+- 📖 **Qudratic Spreadsheet Analysis link**  
+  [Click here to View](https://app.quadratichq.com/file/538c2c17-c43d-43a0-a117-a5afe307018e)
+
+- 📖 **Medium Blog (Detailed Project Explanation)**  
+  [Read the full case study here](https://medium.com/@prathamharer1603/)
+
+- 🎥 **YouTube Walkthrough (Dashboard Demo & Explanation)**  
+  [Watch the full project demo](YOUR_YOUTUBE_LINK_HERE)
 
 ---
