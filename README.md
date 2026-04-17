@@ -1,4 +1,10 @@
-<h1 align="center">End-to-End AI-Powered Supply Chain Analytics</h1>
+<p align="center">
+  <img src="Images/supply.jpg" alt="WhatsApp Chat Analyzer" width="1000"/>
+</p>
+
+
+---
+
 <h2 align="center">Super Mart Domain Analysis</h2>
 
 ---
